@@ -2,7 +2,7 @@ import { createSystem, defaultConfig, defineConfig, defineTokens } from '@chakra
 
 const tokens = defineTokens({
   colors: {
-    blue: { value: '#0C68E9' }
+    blue: { value: '#1a2035' }
   },
   fonts: {
     body: { value: 'Nunito, sans-serif' }
