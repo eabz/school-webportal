@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     url: 'https://portal.cedrosnorte.edu.mx/',
     images: [
       {
-        url: '/banner.jpg',
+        url: 'https://school-webportal.pages.dev/banner.jpg',
         width: 1920,
         height: 1080,
         alt: 'og portal web banner'
