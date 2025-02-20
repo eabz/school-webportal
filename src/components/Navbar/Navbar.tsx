@@ -5,7 +5,6 @@ import {
   Box,
   DrawerBackdrop,
   DrawerBody,
-  DrawerCloseTrigger,
   DrawerContent,
   DrawerHeader,
   DrawerRoot,
@@ -21,7 +20,7 @@ import {
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { CloseIcon, MenuIcon } from '../Icons'
 
 const MenuItems = [
@@ -65,14 +64,19 @@ export function Navbar() {
 
   const [open, setOpen] = useState(false)
 
+  useEffect(() => {
+    if (!pathname) return
+
+    setOpen(false)
+  }, [pathname])
+
   const { mobile } = useMobile()
 
   return (
     <>
-      <DrawerRoot open={mobile ? open : false} size="full" placement="start">
+      <DrawerRoot open={mobile ? open : false} size="full" placement="end">
         <DrawerBackdrop />
         <DrawerContent background="blue">
-          <DrawerCloseTrigger />
           <DrawerHeader>
             <DrawerTitle justifyContent="center">
               <HStack justifyContent="center">
@@ -104,11 +108,6 @@ export function Navbar() {
         justifyContent="space-between"
         paddingX={value}
       >
-        <Box hideFrom="lg" color="white">
-          <IconButton variant="surface" size="xs" hideFrom="lg" onClick={() => setOpen(true)}>
-            <MenuIcon />
-          </IconButton>
-        </Box>
         <Box>
           <Link href="/">
             <Image src="/logo.svg" width="200" alt="Colegio Cedros Norte Logotipo" height="60" priority />
@@ -120,6 +119,11 @@ export function Navbar() {
               <MenuItem key={i} name={item.name} path={item.path} active={item.path === pathname} />
             ))}
           </HStack>
+        </Box>
+        <Box hideFrom="lg" color="white">
+          <IconButton variant="surface" size="xs" hideFrom="lg" onClick={() => setOpen(true)}>
+            <MenuIcon />
+          </IconButton>
         </Box>
       </HStack>
     </>

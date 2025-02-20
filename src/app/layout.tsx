@@ -39,8 +39,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className={`${gillSans.className} antialiased`}>
       <body>
         <ThemeProvider>
-          <Navbar />
-          <Box h="full" position="absolute" top="0" mt="120px" width="full">
+          <Box h="full" position="absolute" top="0" width="full">
+            <Navbar />
             {children}
           </Box>
         </ThemeProvider>
