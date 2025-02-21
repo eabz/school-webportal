@@ -1,13 +1,14 @@
 'use client'
 
-import { Center } from '@chakra-ui/react'
+import { Hero } from '@/components'
+import { Box } from '@chakra-ui/react'
 
 export default function Page() {
   return (
     <main>
-      <Center width="full" height="full">
-        <div />
-      </Center>
+      <Box position="relative" mt="100px">
+        <Hero subtitle="INFORMACIÓN GENERAL" image="/hero-home.jpg" textPosition="left" />
+      </Box>
     </main>
   )
 }
