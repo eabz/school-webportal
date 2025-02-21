@@ -29,7 +29,7 @@ export function Hero({ image, textPosition, title, subtitle }: IHeroProps) {
         align="center"
         justify={textPosition === 'left' ? 'flex-start' : 'flex-end'}
         px={8}
-        bg="rgba(0, 0, 0, 0.4)"
+        bg="rgba(0, 0, 0, 0.5)"
       >
         <Box
           textAlign={textPosition}

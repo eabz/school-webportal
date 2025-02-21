@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <main>
       <Box mt="100px">
-        <Hero subtitle="CALENDARIO Y ACTIVIDADES" image="/hero-home.jpg" textPosition="left" />
+        <Hero title="CALENDARIOS" image="/hero-calendar.jpg" textPosition="left" />
       </Box>
     </main>
   )

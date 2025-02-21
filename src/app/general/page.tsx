@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <main>
       <Box position="relative" mt="100px">
-        <Hero subtitle="INFORMACIÓN GENERAL" image="/hero-home.jpg" textPosition="left" />
+        <Hero title="GENERAL" image="/hero-general.jpg" textPosition="left" />
       </Box>
     </main>
   )
